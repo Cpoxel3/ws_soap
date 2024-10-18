@@ -15,7 +15,7 @@
 
 
         public function run($sql, $args = null){
-            if($args){
+            if(!$args){
                 return $this->query($sql);
             }
             $stmt = $this->prepare($sql);
